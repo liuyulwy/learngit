@@ -55,5 +55,16 @@ git commit --squash <commit> 参数的作用与--fixup类似，表示当前添�
 #### git log
 
 ```
-
+git log 列出当前分支的版本历史
+git log --follow [file] 列出某个文件的版本历史，包括文件改名
+git log origin/master | git log master 查看远程分支/分支的变动情况。
+git log -i --author=ly 查找log，即搜索commit的开发者为ly信息。-i忽略大小写
+git log -i --grep="message" 查找提交信息为"message"的日志
+git log commitid(old)..commitid(new) 查看某个范围内的commit
+git log --graph --decorate --pretty=oneline --abbrev-commit 格式化输出
+—graph commit之间将展示连线
+—decorate 显示commit里面的分支
+—pretty=oneline 只显示commit信息的标题
+—abbrev-commit 只显示commit SHA1的前7位
 ```
+
