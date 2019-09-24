@@ -78,4 +78,3 @@ git checkout -- <filename> 1.将指定文件从暂存区复制到工作区 2.用
 git checkout HEAD~ -- <filename> 还可以指定从某个 commit 恢复指定文件，这会同时改变暂存区和工作区
 git checkout tags/1.1.4 或 git checkout 1.1.4 切换到某个tag
 ```
-
