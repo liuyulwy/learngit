@@ -73,9 +73,12 @@ git log --graph --decorate --pretty=oneline --abbrev-commit 格式化输出
 ```tex
 git checkout develop 表示切换到develop分支。
 git checkout -b dev  切换并创建dev分支
+git checkout -b dev origin/dev 切换并创建dev分支从远程dev
 git checkout <commitID> 切换到指定快照（commit）
+“--”貌似没什么用加不加都行
 git checkout -- <filename> 用来丢弃工作区对该文件的修改 gitcheckout <filename>也可以
 git checkout . 或 git chekcout -- .  丢弃工作区所有修改
 git checkout HEAD~ -- <filename> 还可以指定从某个 commit 恢复指定文件，这会同时改变暂存区和工作区
+git checkout commitid <filename> 同上 
 git checkout tags/1.1.4 或 git checkout 1.1.4 切换到某个tag
 ```
