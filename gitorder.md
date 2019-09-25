@@ -29,7 +29,7 @@ A 新添加到暂存区中的文件
   
 * git add 可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等
 
-  ```
+  ```tex
   git add <file> 将指定文件放入暂存区
   git add <directory> 将指定目录下所有变化的文件，放入暂存区
 git add . 将当前目录下所有变化的文件，放入暂存区，等同于git add -A
@@ -40,7 +40,7 @@ git add . 将当前目录下所有变化的文件，放入暂存区，等同于g
 
 #### git commit 
 
-```
+```tex
 用于将暂存区中的变化提交到仓库区。
 git commit -m "message" message用于添加提交说明。
 git commit <filename>  -m "message" 命令可以跳过暂存区，直接将文件从工作区提交到仓库区。先添加到暂存区，然后再将暂存区提交到仓库区。
@@ -54,7 +54,7 @@ git commit --squash <commit> 参数的作用与--fixup类似，表示当前添�
 
 #### git log
 
-```
+```tex
 git log 列出当前分支的版本历史
 git log --follow [file] 列出某个文件的版本历史，包括文件改名
 git log origin/master | git log master 查看远程分支/分支的变动情况。
@@ -70,7 +70,7 @@ git log --graph --decorate --pretty=oneline --abbrev-commit 格式化输出
 
 #### git checkout 
 
-```
+```tex
 git checkout develop 表示切换到develop分支。
 git checkout -b dev  切换并创建dev分支
 git checkout <commitID> 切换到指定快照（commit）
