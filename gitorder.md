@@ -95,7 +95,7 @@ git reset --soft 无任何效果
 git reset --hard 同时撤销暂存区和工作区的修改 回复到上一次提交的状态
 git reset -- <filename> 撤销上一次向暂存区添加的某个指定文件，不影响工作区中的该文件
 git reset HEAD~3 将当期分支的指针倒退三个 commit，并且会改变暂存区
-git reset --soft HEAD~3 倒退指针的同时，不改变暂存区
+git reset --soft HEAD~3 倒退指针的同时，不改变暂存区 此次之后的修改都会被退回到暂存区
 git reset --hard HEAD~3 倒退指针的同时，改变工作区
 
 soft: 不改变工作区和缓存区，只移动 HEAD 到指定 commit。
@@ -110,3 +110,4 @@ hard：改变工作区和暂存区到指定 commit。该参数等同于重置，
 git revert 是生成一个新的提交来撤销某次提交，此次提交之前的commit都会被保留
 ``````
 
+区别 ： git reset 是回到某次提交，提交及之前的commit都会被保留，但是此次之后的修改都会被退回到暂存区
