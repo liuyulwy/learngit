@@ -52,6 +52,19 @@ git commit --fixup <commit> 当前添加的 commit 是以前某一个 commit 的
 git commit --squash <commit> 参数的作用与--fixup类似，表示当前添加的 commit 应该与以前某一个 commit 合并成一个，以后执行互动式的git rebase的时候，这两个 commit 将会合并成一个。
 ```
 
+#### git stash
+
+``````tex
+git stash命令用于暂时保存没有提交的工作。运行该命令后，所有没有commit的代码，都会暂时从工作区移除，回到上次commit时的状态。
+git stash list 列出所有暂时保存的工作
+git stash apply stash@{1} 恢复某个暂时保存的工作,不会自动删除取出的修改，需要手动删除。
+git stash pop 恢复最近一次stash的文件,自动删除stash
+git stash drop 丢弃最近一次stash的文件
+git stash drop stash@{1} 丢弃某个暂时保存的工作
+git stash clear 删除所有的stash
+git stash branch stashdev 以stash创建分支
+``````
+
 #### git log
 
 ```tex
