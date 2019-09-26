@@ -122,3 +122,13 @@ rm filename 物理删除文件 不会在git中记录
 rm -r 删除文件夹
 ``````
 
+#### git mv
+
+``````tex
+git mv text.txt mydir 把一个文件：text.txt 移动到 mydir，可以执行以下操作
+运行上面的 git mv 其实就相当于运行了3条命令
+mv test.txt mydir/
+git rm test.txt
+git add mydir
+``````
+
