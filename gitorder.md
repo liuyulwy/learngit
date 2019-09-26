@@ -63,7 +63,7 @@ git log -i --grep="message" 查找提交信息为"message"的日志
 git log commitid(old)..commitid(new) 查看某个范围内的commit
 git log --graph --decorate --pretty=oneline --abbrev-commit 格式化输出
 git log --graph --oneline 同上
-git log --oneline -n5 显示5条
+git log --oneline -5 显示5条
 —graph commit之间将展示连线
 —decorate 显示commit里面的分支
 —pretty=oneline 只显示commit信息的标题
@@ -76,6 +76,12 @@ git log --oneline -n5 显示5条
 git shortlog -s -n git #repository 底下每个用户进行 commit 的次数，以及每次 commit 的注释
 -s 参数省略每次 commit 的注释，仅仅返回一个简单的统计。
 -n 参数按照 commit 数量从多到少的顺序对用户进行排序
+``````
+
+#### git reflog
+
+``````tex
+git reflog -n 查看命令历史，以便确定要回到未来的哪个版本。
 ``````
 
 #### git checkout 
@@ -138,4 +144,19 @@ git mv text.txt mydir 把一个文件：text.txt 移动到 mydir，可以执行�
 mv test.txt mydir/
 git rm test.txt
 git add mydir
+``````
+
+#### git branch
+
+``````tex
+git branch 列出所有本地分支
+git branch -a 列出所有本地分支和远程分支
+git branch develop 新建一个分支，指向当前 commit
+git checkout -b NewBranch MyBranch 可以新建的同时，切换到新分支。
+git branch -d <分支名> 删除一个分支
+git branch -D <分支名> 强制删除一个分支，不管有没有未合并变化。
+git push origin --delete <分支名> 删除远程分支
+git branch -m devname 为当前分支改名
+git branch -m 原名字 新名字 为指定分支改名
+git branch -m feature132 twitter-experiment 如果有重名分支，强制改名
 ``````
