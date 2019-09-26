@@ -62,6 +62,8 @@ git log -i --author=ly 查找log，即搜索commit的开发者为ly信息。-i�
 git log -i --grep="message" 查找提交信息为"message"的日志
 git log commitid(old)..commitid(new) 查看某个范围内的commit
 git log --graph --decorate --pretty=oneline --abbrev-commit 格式化输出
+git log --graph --oneline 同上
+git log --oneline -n5 显示5条
 —graph commit之间将展示连线
 —decorate 显示commit里面的分支
 —pretty=oneline 只显示commit信息的标题
@@ -101,3 +103,10 @@ mixed: 只改变缓存区，不改变工作区。***这是默认参数***，通�
 hard：改变工作区和暂存区到指定 commit。该参数等同于重置，可能会引起数据损失。git reset --hard等同于git reset --hard HEAD。
 -p表示键入交互模式，指定暂存区的哪些部分需要撤销。
 ```
+
+#### git revert
+
+``````tex
+git revert 是生成一个新的提交来撤销某次提交，此次提交之前的commit都会被保留
+``````
+
