@@ -115,5 +115,10 @@ git revert 是生成一个新的提交来撤销某次提交，此次提交之前
 #### git rm
 
 ``````tex
-
+git rm filename 同时从工作区和索引中删除文件。即本地的文件也被删除了。
+git rm --cached filename 从索引中删除文件。但是本地文件还存在， 只是不希望这个文件被版本控制。解除追踪某个文件，即该文件已被git add添加，然后抵消这个操作
+git rm -r --cached file 从索引中删除文件夹，本地存在
+rm filename 物理删除文件 不会在git中记录
+rm -r 删除文件夹
 ``````
+
