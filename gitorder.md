@@ -70,6 +70,14 @@ git log --oneline -n5 显示5条
 —abbrev-commit 只显示commit SHA1的前7位
 ```
 
+#### git shortlog
+
+``````tex
+git shortlog -s -n git #repository 底下每个用户进行 commit 的次数，以及每次 commit 的注释
+-s 参数省略每次 commit 的注释，仅仅返回一个简单的统计。
+-n 参数按照 commit 数量从多到少的顺序对用户进行排序
+``````
+
 #### git checkout 
 
 ```tex
@@ -131,4 +139,3 @@ mv test.txt mydir/
 git rm test.txt
 git add mydir
 ``````
-
