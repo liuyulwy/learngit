@@ -79,7 +79,7 @@ git checkout <commitID> 切换到指定快照（commit）是不能更改它的�
 “--”貌似没什么用加不加都行
 git checkout -- <filename> 用来丢弃工作区对该文件的修改 gitcheckout <filename>也可以
 git checkout . 或 git chekcout -- .  丢弃工作区所有修改
-git checkout HEAD~ -- <filename> 还可以指定从某个 commit 恢复指定文件，这会同时改变该文件暂存区和工作区
+git checkout HEAD~ -- <filename> 还可以指定从某个 commit 恢复指定文件，这会同时改变暂存区和工作区
 git checkout commitid <filename> 同上 
 git checkout tags/1.1.4 或 git checkout 1.1.4 切换到某个tag 只是一个快照detached HEAD状态
 ```
@@ -101,4 +101,3 @@ mixed: 只改变缓存区，不改变工作区。***这是默认参数***，通�
 hard：改变工作区和暂存区到指定 commit。该参数等同于重置，可能会引起数据损失。git reset --hard等同于git reset --hard HEAD。
 -p表示键入交互模式，指定暂存区的哪些部分需要撤销。
 ```
-
