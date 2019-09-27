@@ -181,6 +181,7 @@ git push origin --delete <分支名> 删除远程分支
 git branch -m devname 为当前分支改名
 git branch -m 原名字 新名字 为指定分支改名
 git branch -m feature132 twitter-experiment 如果有重名分支，强制改名
+git branch --set-upstream-to=origin/master master 设置当前分支与远程分支存在追踪关系 之后通过git pull git push 直接拉取或提交
 ``````
 
 #### git fetch
@@ -202,6 +203,6 @@ git merge tmp //合并tmp分支到当前分支
 git pull <远程主机名> <远程分支名>:<本地分支名> 取出远程分支数据并合并到本地分支中，如果本地无分支，会自动创建分支。相当于git fetch 再 git merge，“：分支名”可省略 表示当前分支
 git pull origin develop  拉取远程分支到当前本地分支。
 git pull --rebase <远程主机名> <远程分支名>:<本地分支名> 相当于 git fetch 再 git rebase
-git branch --set-upstream master origin/master 设置当前分支与远程分支存在追踪关系 之后通过git pull 直接拉取远程分支到本地
+git branch --set-upstream-to=origin/master master 设置当前分支与远程分支存在追踪关系 之后通过git pull 直接拉取远程分支到本地
 ``````
 
