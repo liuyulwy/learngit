@@ -1,42 +1,49 @@
 ## 常用git 命令
 
-* 现有项目初始化 生成 .git文件
+#### git init
 
-  ```tex
-  git init
-  ```
+```tex
+git init 现有项目初始化 生成 .git文件 在该文件夹默认会创建master分支
+git remote add 别名（origin）仓库地址url  关联远程仓库,并将本地的master分支跟踪到远程的分支
+```
 
-* 克隆现有仓库
+#### git remote
 
-  ```tex
-  git clone url
-  ```
-  
-* 检查当前文件状态
-  
-  ```tex
-  git status
-  git status -s 或 git status --short 简洁显示
-  ```
-  
-* ??  M A
-  
-  ```tex
-  ?? 新添加的未跟踪文件
-  M 表示该文件被修改了但是还没放入暂存区
+``````tex
+git remote 它会列出每个远程库的简短名字
+git remote -v 显示对应的克隆地址
+git remote add 别名（origin）仓库地址url  关联远程仓库,并将本地的master分支跟踪到远程的分支
+git remote show origin 查看远程仓库信息
+git remote rename oldname newname 修改某个远程仓库在本地的简称
+git remote rm name 除对应的远端仓库
+``````
+
+#### git clone
+
+```tex
+git clone url 本质上就是自动创建了本地的 master 分支用于跟踪远程仓库中的 master 分支,自动将远程仓库归于 origin 名下
+```
+
+#### git status
+
+```tex
+git status 检查当前文件状态
+git status -s 或 git status --short 简洁显示
+?? 新添加的未跟踪文件
+M 表示该文件被修改了但是还没放入暂存区
 A 新添加到暂存区中的文件
-  ```
-  
-* git add 可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等
+```
 
-  ```tex
-  git add <file> 将指定文件放入暂存区
-  git add <directory> 将指定目录下所有变化的文件，放入暂存区
+#### git add 
+
+```tex
+可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等
+git add <file> 将指定文件放入暂存区
+git add <directory> 将指定目录下所有变化的文件，放入暂存区
 git add . 将当前目录下所有变化的文件，放入暂存区，等同于git add -A
-  git add -u 表示只添加暂存区已有的文件（包括删除操作），但不添加新增的文件。
-  git add -f <fileName> 表示强制添加某个文件，不管.gitignore是否包含了这个文件。
-  ```
-  
+git add -u 表示只添加暂存区已有的文件（包括删除操作），但不添加新增的文件。
+git add -f <fileName> 表示强制添加某个文件，不管.gitignore是否包含了这个文件。
+```
 
 #### git commit 
 
