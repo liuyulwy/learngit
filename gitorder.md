@@ -221,9 +221,24 @@ git push origin :tag_name 删除远程标签
 
 ``````tex
 git merge dev 将分支dev合并到当前分支中，自动进行新的提交
-git merge --no-commit dev 合并到当前分支中，但不要自动进行新的提交
+git merge --no-commit dev 合并到当前分支中，但不要自动进行新的提交,手动提交并写提交信息
 git merge --no-ff dev 即使可以使用fast-forward模式，也要创建一个新的合并节点。
 git merge --squash dev 当一个合并发生时，从当前分支和对方分支的共同祖先节点之后的对方分支节点，一直到对方分支的顶部节点将会压缩在一起，使用者可以经过审视后进行提交，产生一个新的节点。
 功能分支在进行一个功能需求的研发时，开发者可能在本地提交了大量且无意义的节点，当需要合并到develop分支时，可能仅仅需要用一个新的节点来表示这一长串节点的修改内容，这时--squash命令将会发挥作用。此外，如果功能分支的多次提交并不是琐碎而都是有意义的，使用--no-ff命令更为合适。
+``````
+
+#### git tag
+
+``````tex
+git tag 列出现有标签
+git tag -l 'v1.0.*' 列出v1.0.*系列标签
+git tag name 轻量级标签
+git tag -a v1.4 -m 'my version 1.4' 含附注的标签
+git tag -a v1.2 commitid -m "des" 后期添加标签
+git show v1.4 查看相应标签的版本信息
+git tag -d v1.0 删除本地标签
+git push origin :refs/tags/test_tag 或 git push origin --delete tag v1.2.0 删除远程tag
+git push origin --tags 推送所有标签到远程
+git push origin v1.5 推送到远程
 ``````
 
