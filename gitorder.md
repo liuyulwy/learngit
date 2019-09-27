@@ -81,6 +81,7 @@ git log origin/master | git log master 查看远程分支/分支的变动情况�
 git log -i --author=ly 查找log，即搜索commit的开发者为ly信息。-i忽略大小写
 git log -i --grep="message" 查找提交信息为"message"的日志
 git log commitid(old)..commitid(new) 查看某个范围内的commit
+git log -p master..origin/master 比较本地的master分支和origin/master分支的差别
 git log --graph --decorate --pretty=oneline --abbrev-commit 格式化输出
 git log --graph --oneline 同上
 git log --oneline -5 显示5条
@@ -170,6 +171,7 @@ git add mydir
 
 ``````tex
 git branch 列出所有本地分支
+git branch -r  列出所有远程分支
 git branch -a 列出所有本地分支和远程分支
 git branch develop 新建一个分支，指向当前 commit
 git checkout -b NewBranch MyBranch 可以新建的同时，切换到新分支。
@@ -180,3 +182,26 @@ git branch -m devname 为当前分支改名
 git branch -m 原名字 新名字 为指定分支改名
 git branch -m feature132 twitter-experiment 如果有重名分支，强制改名
 ``````
+
+#### git fetch
+
+``````tex
+git fetch 相当于是从远程获取最新到本地，不会自动merge
+git fetch orgin master //将远程仓库的master分支下载到本地当前branch中
+git log -p master..origin/master //比较本地的master分支和origin/master分支的差别
+git merge origin/master //进行合并
+
+git fetch origin master:tmp //从远程仓库master分支获取最新，在本地建立tmp分支
+git diff tmp //將當前分支和tmp进行对比
+git merge tmp //合并tmp分支到当前分支
+``````
+
+#### git pull
+
+``````tex
+git pull <远程主机名> <远程分支名>:<本地分支名> 取出远程分支数据并合并到本地分支中，如果本地无分支，会自动创建分支。相当于git fetch 再 git merge，“：分支名”可省略 表示当前分支
+git pull origin develop  拉取远程分支到当前本地分支。
+git pull --rebase <远程主机名> <远程分支名>:<本地分支名> 相当于 git fetch 再 git rebase
+git branch --set-upstream master origin/master 设置当前分支与远程分支存在追踪关系 之后通过git pull 直接拉取远程分支到本地
+``````
+
