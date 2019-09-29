@@ -38,6 +38,8 @@
 
  [git merge](#git-merge)
 
+[git-rebase](#git-rebase)
+
  [git tag](#git-tag)
 
 [git diff](#git-diff)
@@ -269,6 +271,15 @@ git merge --no-commit dev 合并到当前分支中，但不要自动进行新的
 git merge --no-ff dev 即使可以使用fast-forward模式，也要创建一个新的合并节点。
 git merge --squash dev 当一个合并发生时，从当前分支和对方分支的共同祖先节点之后的对方分支节点，一直到对方分支的顶部节点将会压缩在一起，使用者可以经过审视后进行提交，产生一个新的节点。
 功能分支在进行一个功能需求的研发时，开发者可能在本地提交了大量且无意义的节点，当需要合并到develop分支时，可能仅仅需要用一个新的节点来表示这一长串节点的修改内容，这时--squash命令将会发挥作用。此外，如果功能分支的多次提交并不是琐碎而都是有意义的，使用--no-ff命令更为合适。
+``````
+
+#### git-rebase
+
+``````tex
+git checkout mywork 
+git rebase origin
+这些命令会把你的”mywork“分支里的每个提交(commit)取消掉，并且把它们临时 保存为补丁(patch)(这些补丁放到”.git/rebase“目录中),然后把”mywork“分支更新 到最新的”origin“分支，最后把保存的这些补丁应用到”mywork“分支上。
+在rebase的过程中，也许会出现冲突(conflict)。在这种情况，Git会停止rebase并会让你去解决冲突；在解决完冲突后，用”git add“命令去更新这些内容的索引(index), 然后，你无需执行 git commit,只要执行:git rebase --continue 在任何时候，可以用--abort参数来终止rebase的操作，并且”mywork“ 分支会回到rebase开始前的状态。git rebase --abort
 ``````
 
 #### git-tag
