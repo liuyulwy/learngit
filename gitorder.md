@@ -1,61 +1,57 @@
- [git init](#git init) 
+ [git init](#git-init) 
 
- [git remote](#git remote)
+ [git remote](#git-remote)
 
- [git clone](#git clone)
+ [git clone](#git-clone)
 
- [git status](#git status)
+ [git status](#git-status)
 
- [git add](#git add)
+ [git add](#git-add)
 
- [git commit](#git commit)
+ [git commit](#git-commit)
 
- [git stash](#git stash)
+ [git stash](#git-stash)
 
- [git log](#git log)
+ [git log](#git-log)
 
- [git shortlog](#git shortlog)
+ [git shortlog](#git-shortlog)
 
- [git reflog](#git reflog)
+ [git reflog](#git-reflog)
 
- [git checkout](#git checkout)
+ [git checkout](#git-checkout)
 
- [git reset](#git reset)
+ [git reset](#git-reset)
 
- [git revert](#git revert)
+ [git revert](#git-revert)
 
- [git rm](#git rm)
+ [git rm](#git-rm)
 
- [git mv](#git mv)
+ [git mv](#git-mv)
 
- [git branch](#git branch)
+ [git branch](#git-branch)
 
- [git fetch](#git fetch)
+ [git fetch](#git-fetch)
 
- [git pull](#git pull)
+ [git pull](#git-pull)
 
- [git push](#git push)
+ [git push](#git-push)
 
- [git merge](#git merge)
+ [git merge](#git-merge)
 
- [git tag](#git tag)
+ [git tag](#git-tag)
 
-[git diff](#git diff)
-
-
-
-[test点击](#test&nbsp;test)
+[git diff](#git-diff)
 
 ## 常用git 命令
 
-#### git init
+#### git-init
 
 ```tex
 git init 现有项目初始化 生成 .git文件 在该文件夹默认会创建master分支
 git remote add 别名（origin）仓库地址url  关联远程仓库,并将本地的master分支跟踪到远程的分支
 ```
 
-#### git remote
+#### git-remote
 
 ``````tex
 git remote 它会列出每个远程库的简短名字
@@ -66,13 +62,13 @@ git remote rename oldname newname 修改某个远程仓库在本地的简称
 git remote rm name 除对应的远端仓库
 ``````
 
-#### git clone
+#### git-clone
 
 ```tex
 git clone url 本质上就是自动创建了本地的 master 分支用于跟踪远程仓库中的 master 分支,自动将远程仓库归于 origin 名下
 ```
 
-#### git status
+#### git-status
 
 ```tex
 git status 检查当前文件状态
@@ -82,7 +78,7 @@ M 表示该文件被修改了但是还没放入暂存区
 A 新添加到暂存区中的文件
 ```
 
-#### git add 
+#### git-add 
 
 ```tex
 可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等
@@ -93,7 +89,7 @@ git add -u 表示只添加暂存区已有的文件（包括删除操作），但
 git add -f <fileName> 表示强制添加某个文件，不管.gitignore是否包含了这个文件。
 ```
 
-#### git commit 
+#### git-commit 
 
 ```tex
 用于将暂存区中的变化提交到仓库区。
@@ -107,7 +103,7 @@ git commit --fixup <commit> 当前添加的 commit 是以前某一个 commit 的
 git commit --squash <commit> 参数的作用与--fixup类似，表示当前添加的 commit 应该与以前某一个 commit 合并成一个，以后执行互动式的git rebase的时候，这两个 commit 将会合并成一个。
 ```
 
-#### git stash
+#### git-stash
 
 ``````tex
 git stash命令用于暂时保存没有提交的工作。运行该命令后，所有没有commit的代码，都会暂时从工作区移除，回到上次commit时的状态。
@@ -120,7 +116,7 @@ git stash clear 删除所有的stash
 git stash branch stashdev 以stash创建分支
 ``````
 
-#### git log
+#### git-log
 
 ```tex
 git log 列出当前分支的版本历史
@@ -139,7 +135,7 @@ git log --oneline -5 显示5条
 —abbrev-commit 只显示commit SHA1的前7位
 ```
 
-#### git shortlog
+#### git-shortlog
 
 ``````tex
 git shortlog -s -n git #repository 底下每个用户进行 commit 的次数，以及每次 commit 的注释
@@ -147,13 +143,13 @@ git shortlog -s -n git #repository 底下每个用户进行 commit 的次数，�
 -n 参数按照 commit 数量从多到少的顺序对用户进行排序
 ``````
 
-#### git reflog
+#### git-reflog
 
 ``````tex
 git reflog -n 查看命令历史，以便确定要回到未来的哪个版本。
 ``````
 
-#### git checkout 
+#### git-checkout 
 
 ```tex
 git checkout develop 表示切换到develop分支。
@@ -169,7 +165,7 @@ git checkout commitid <filename> 同上
 git checkout tags/1.1.4 或 git checkout 1.1.4 切换到某个tag 只是一个快照detached HEAD状态
 ```
 
-#### git reset
+#### git-reset
 
 ```tex
 如果不指定回滚的位置，那么等同于撤销修改。
@@ -187,7 +183,7 @@ hard：改变工作区和暂存区到指定 commit。该参数等同于重置，
 -p表示键入交互模式，指定暂存区的哪些部分需要撤销。
 ```
 
-#### git revert
+#### git-revert
 
 ``````tex
 git revert 是生成一个新的提交来撤销某次提交，此次提交之前的commit都会被保留
@@ -195,7 +191,7 @@ git revert 是生成一个新的提交来撤销某次提交，此次提交之前
 
 区别 ： git reset 是回到某次提交，提交及之前的commit都会被保留，但是此次之后的修改都会被退回到暂存区
 
-#### git rm
+#### git-rm
 
 ``````tex
 git rm filename 同时从工作区和索引中删除文件。即本地的文件也被删除了。
@@ -205,7 +201,7 @@ rm filename 物理删除文件 不会在git中记录
 rm -r 删除文件夹
 ``````
 
-#### git mv
+#### git-mv
 
 ``````tex
 git mv text.txt mydir 把一个文件：text.txt 移动到 mydir，可以执行以下操作
@@ -215,7 +211,7 @@ git rm test.txt
 git add mydir
 ``````
 
-#### git branch
+#### git-branch
 
 ``````tex
 git branch 列出所有本地分支
@@ -232,7 +228,7 @@ git branch -m feature132 twitter-experiment 如果有重名分支，强制改名
 git branch --set-upstream-to=origin/master master 设置当前分支与远程分支存在追踪关系 之后通过git pull git push 直接拉取或提交
 ``````
 
-#### git fetch
+#### git-fetch
 
 ``````tex
 git fetch 相当于是从远程获取最新到本地，不会自动merge
@@ -245,7 +241,7 @@ git diff tmp //將當前分支和tmp进行对比
 git merge tmp //合并tmp分支到当前分支
 ``````
 
-#### git pull
+#### git-pull
 
 ``````tex
 git pull <远程主机名> <远程分支名>:<本地分支名> 取出远程分支数据并合并到本地分支中，如果本地无分支，会自动创建分支。相当于git fetch 再 git merge，“：分支名”可省略 表示当前分支
@@ -254,7 +250,7 @@ git pull --rebase <远程主机名> <远程分支名>:<本地分支名> 相当�
 git branch --set-upstream-to=origin/master master 设置当前分支与远程分支存在追踪关系 之后通过git pull 直接拉取远程分支到本地
 ``````
 
-#### git push
+#### git-push
 
 ``````tex
 git push <远程主机名> <本地分支名>:<远程分支名> 命令用于将本地分支的更新，推送到远程主机
@@ -265,7 +261,7 @@ git push origin tag_name 推送tag
 git push origin :tag_name 删除远程标签
 ``````
 
-#### git merge 
+#### git-merge 
 
 ``````tex
 git merge dev 将分支dev合并到当前分支中，自动进行新的提交
@@ -275,7 +271,7 @@ git merge --squash dev 当一个合并发生时，从当前分支和对方分支
 功能分支在进行一个功能需求的研发时，开发者可能在本地提交了大量且无意义的节点，当需要合并到develop分支时，可能仅仅需要用一个新的节点来表示这一长串节点的修改内容，这时--squash命令将会发挥作用。此外，如果功能分支的多次提交并不是琐碎而都是有意义的，使用--no-ff命令更为合适。
 ``````
 
-#### git tag
+#### git-tag
 
 ``````tex
 git tag 列出现有标签
@@ -290,7 +286,7 @@ git push origin --tags 推送所有标签到远程
 git push origin v1.5 推送到远程
 ``````
 
-#### git diff
+#### git-diff
 
 ``````tex
 git diff 工作目录和暂存区之间的差异
@@ -304,4 +300,3 @@ git diff HEAD^ HEAD 比较上次提交和上上次提交
 git diff commitid commitid 比较两个历史版本之间的差异
 ``````
 
-#### test&nbsp;test
