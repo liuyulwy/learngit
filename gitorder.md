@@ -1,3 +1,26 @@
+ [git init](#git init) 
+ [git remote](#git remote)
+ [git clone](#git clone)
+ [git status](#git status)
+ [git add](#git add)
+ [git commit](#git commit)
+ [git stash](#git stash)
+ [git log](#git log)
+ [git shortlog](#git shortlog)
+ [git reflog](#git reflog)
+ [git checkout](#git checkout)
+ [git reset](#git reset)
+ [git revert](#git revert)
+ [git rm](#git rm)
+ [git mv](#git mv)
+ [git branch](#git branch)
+ [git fetch](#git fetch)
+ [git pull](#git pull)
+ [git push](#git push)
+ [git merge](#git merge)
+ [git tag](#git tag)
+ [git diff](#git diff)
+
 ## 常用git 命令
 
 #### git init
