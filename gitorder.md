@@ -1,3 +1,5 @@
+ [git config](#git-config)
+
  [git init](#git-init) 
 
  [git remote](#git-remote)
@@ -45,6 +47,18 @@
 [git diff](#git-diff)
 
 ## 常用git 命令
+
+#### git-config
+
+``````tex
+全局配置
+git config --global user.name "maxsu"
+git config --global user.email "yiibai.com@gmail.com"
+局部配置
+git config  user.name "maxsu"
+git config user.email "yiibai.com@gmail.com"
+git config --list 所有的设置
+``````
 
 #### git-init
 
