@@ -242,3 +242,17 @@ git push origin --tags 推送所有标签到远程
 git push origin v1.5 推送到远程
 ``````
 
+#### git diff
+
+``````tex
+git diff 工作目录和暂存区之间的差异
+git diff <file>  比较当前文件和暂存区文件差异
+git diff --cached | git diff --staged 已经暂存起来的文件(staged)和上次提交时的快照之间(HEAD)的差异
+git diff HEAD 工作区和暂存区 与 已经提交版本库的差异
+git diff test 查看当前目录和另外一个分支(test)的差别
+git diff dev1 dev2 | git diff dev1..div2 两个分支上最新的提交做diff
+git diff --stat 查看简单的diff结果
+git diff HEAD^ HEAD 比较上次提交和上上次提交
+git diff commitid commitid 比较两个历史版本之间的差异
+``````
+
