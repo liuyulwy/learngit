@@ -76,6 +76,7 @@ git remote add 别名（origin）仓库地址url  关联远程仓库,并将本�
 git remote show origin 查看远程仓库信息
 git remote rename oldname newname 修改某个远程仓库在本地的简称
 git remote rm name 除对应的远端仓库
+git remote update origin --prune  更新仓库列表
 ``````
 
 #### git-clone
